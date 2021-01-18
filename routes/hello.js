@@ -2,9 +2,12 @@
 /*
  * GET home page.
  */
-
 exports.view = function(req, res){
-  res.render('index', {
-  	'name': '',
+  var nameToShow = req.params.userName;
+  console.log("Name is" + nameToShow);
+
+  res.render("hello", {
+  	"name": nameToShow,
   });
 };
+
